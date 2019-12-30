@@ -1,3 +1,8 @@
+/*
+ * This file is created by script.
+ * Go for it!
+ */
+
 #include <iostream>
 #include <string>
 
