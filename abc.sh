@@ -5,7 +5,6 @@ prefix="abc"
 problems=("a" "b" "c")
 template_file="template.cc"
 main_file="main.cc"
-input_file="input.txt"
 
 if [ -z "$no" ]; then
     echo "usage: ./abc.sh problem_no"
