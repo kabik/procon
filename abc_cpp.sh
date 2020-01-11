@@ -7,7 +7,7 @@ template_file="template.cc"
 main_file="main.cc"
 
 if [ -z "$no" ]; then
-    echo "usage: ./abc.sh problem_no"
+    echo "usage: ./abc_cpp.sh problem_no"
     exit 0
 fi
 
