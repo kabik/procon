@@ -24,23 +24,23 @@ for i in range(1, n+1):
             cnt += 2
             #print(i, k, cnt)
 
-    elif l >= 2:
-        if l == 2:
-            k = int(tail+head)
-            if k <= n:
-                if i == k:
-                    cnt += 1
-                    #print(i, k, cnt)
-                else:
-                    done_list.append(k)
-                    cnt += 2
-                    #print(i, k, cnt)
-
-        for mid in range( pow(10, l - 2) ):
-            k = int(tail + str(mid) + head)
-            if k > n: continue
-            if not k in done_list:
-                done_list.append(k)
+    if l == 2:
+        k = int(tail+head)
+        if k <= n:
+            if i == k:
                 cnt += 1
+                #print(i, k, cnt)
+            else:
+                done_list.append(k)
+                cnt += 2
+                #print(i, k, cnt)
+
+    for mid in range( pow(10, l) ):
+        k = int(tail + str(mid) + head)
+        #print(i, mid, k)
+        if k > n: break
+        if not k in done_list:
+            done_list.append(k)
+            cnt += 2
 
 print(cnt)
