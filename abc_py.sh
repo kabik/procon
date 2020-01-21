@@ -4,7 +4,6 @@ no=$1
 prefix="abc"
 problems=("a" "b" "c")
 template_file="template.py"
-main_file="main.py"
 
 if [ -z "$no" ]; then
     echo "usage: ./abc_py.sh problem_no"
@@ -12,8 +11,8 @@ if [ -z "$no" ]; then
 fi
 
 for i in ${problems[@]}; do
-    prob_dir=${prefix}${no}/${i}
+    prob_dir=${prefix}${no}
     mkdir -p ${prob_dir}
-    cp -i $template_file ${prob_dir}/${main_file}
+    cp -i $template_file ${prob_dir}/${i}.py
     touch ${prob_dir}/${input_file}
 done
