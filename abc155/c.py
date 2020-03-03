@@ -8,7 +8,7 @@ for t in s:
     else:
         ans[t] = 1
 
-max_cnt = ans[max(ans)]
+max_cnt = max(ans.values())
 
 for t in sorted(ans):
     if ans[t] == max_cnt:
