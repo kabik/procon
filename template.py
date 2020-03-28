@@ -5,8 +5,8 @@ B = np.array([np.array(list(map(int, input().split()))) for _ in range(N)])
 
 
 s = input()
-n = int(input())
+N = int(input())
 a, b = map(int, input().split())
 l = list(map(int, input().split()))
-l = [int(input()) for _ in range(n)]
-l = [list(map(int, input().split())) for _ in range(n)]
+l = [int(input()) for _ in range(N)]
+l = [list(map(int, input().split())) for _ in range(N)]
