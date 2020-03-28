@@ -12,3 +12,16 @@ def conb(a, b):
         deno *= i + 1
 
     return int(nume / deno)
+
+"""
+return gcd
+"""
+def gcd_step(a, b):
+    return b, a % b
+
+def gcd(a, b):
+    a, b = gcd_step(a,b)
+    while b > 0:
+        a,b = gcd_step(a,b)
+
+    return a
