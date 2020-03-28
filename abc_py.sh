@@ -2,7 +2,7 @@
 
 no=$1
 prefix="abc"
-problems=("a" "b" "c")
+problems=("a" "b" "c" "d" "e")
 template_file="template.py"
 
 if [ -z "$no" ]; then
