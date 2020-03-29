@@ -2,7 +2,7 @@
 
 ## 概要
 
-(kabik)[https://atcoder.jp/users/kabik]がAtCoderの問題を解く時に使っているリポジトリです。
+(kabik)[https://atcoder.jp/users/kabik] がAtCoderの問題を解く時に使っているリポジトリです。
 
 過去に解いた問題の回答やメモを保存してます。
 
