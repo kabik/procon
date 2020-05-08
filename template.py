@@ -4,9 +4,9 @@ A = np.array(list(map(int, input().split())))
 B = np.array([np.array(list(map(int, input().split()))) for _ in range(N)])
 
 
-s = input()
+S = input()
 N = int(input())
-a, b = map(int, input().split())
-l = list(map(int, input().split()))
-l = [int(input()) for _ in range(N)]
-l = [list(map(int, input().split())) for _ in range(N)]
+N, M = map(int, input().split())
+A = list(map(int, input().split()))
+A = [int(input()) for _ in range(N)]
+BC = [list(map(int, input().split())) for _ in range(N)]
