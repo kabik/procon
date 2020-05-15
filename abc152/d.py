@@ -1,46 +1,18 @@
-n = int(input())
+N = int(input())
 
-done_list = []
-cnt = 0
-for i in range(1, n+1):
+d = {}
+for i in range(1, 10):
+    for j in range(1, 10):
+        d[(i, j)] = 0
+
+for i in range(1, N+1):
     s = str(i)
-    l = len(s)
-    head = s[0]
-    tail = s[l - 1]
+    head, tail = int(s[0]), int(s[-1])
+    if head > 0 and tail > 0:
+        d[(head, tail)] += 1
 
-    if l > 1 and head == tail:
-        cnt += 1
-        #print(i, i, cnt)
-        continue
-    if i in done_list: continue
-    if tail == '0': continue
-
-    if l == 1:
-        cnt += 1
-        #print(i, i, cnt)
-        k = int(head+head)
-        if k <= n:
-            done_list.append(k)
-            cnt += 2
-            #print(i, k, cnt)
-
-    if l == 2:
-        k = int(tail+head)
-        if k <= n:
-            if i == k:
-                cnt += 1
-                #print(i, k, cnt)
-            else:
-                done_list.append(k)
-                cnt += 2
-                #print(i, k, cnt)
-
-    for mid in range( pow(10, l) ):
-        k = int(tail + str(mid) + head)
-        #print(i, mid, k)
-        if k > n: break
-        if not k in done_list:
-            done_list.append(k)
-            cnt += 2
-
-print(cnt)
+ans = 0
+for i in range(1, 10):
+    for j in range(1, 10):
+        ans += d[(i,j)] * d[(j,i)]
+print(ans)
