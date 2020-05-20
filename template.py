@@ -1,5 +1,7 @@
-import numpy as np
+import sys
+input = sys.stdin.readline
 
+import numpy as np
 A = np.array(list(map(int, input().split())))
 B = np.array([np.array(list(map(int, input().split()))) for _ in range(N)])
 
