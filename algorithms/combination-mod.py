@@ -1,3 +1,6 @@
+N = 10**6
+MOD = 10**9+7
+
 def pow_mod(x, n):
     if n == 0:
         return 1
@@ -15,4 +18,9 @@ for i in range(N, 1, -1):
     inv[i-1] = inv[i] * (i) % MOD
 
 def cmb_mod(n,r):
-    return fact[n] * inv[r] * inv[n-r] % MOD
+    if n == r == 0:
+        return 1
+    elif n < r:
+        return 0
+    else:
+        return fact[n] * inv[r] * inv[n-r] % MOD
