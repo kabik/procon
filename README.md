@@ -12,7 +12,7 @@
 `abc{contest number}` というディレクトリを作り、`template.py` の内容を `abc{contest number}/*.py` にコピーします
 
 ```bash
-./python_dir.sh {contest number}
+./prepare.sh {contest number}
 ```
 
 
