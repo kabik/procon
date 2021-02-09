@@ -12,3 +12,6 @@ N, M = map(int, input().split())
 A = list(map(int, input().split()))
 A = [int(input()) for _ in range(N)]
 BC = [list(map(int, input().split())) for _ in range(N)]
+
+ans = [1, 2, 3]
+print('\n'.join(map(str, ans)))
