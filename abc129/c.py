@@ -8,7 +8,7 @@ for _ in range(M):
     broken[a] = True
 
 MOD = 10**9+7
-P = [0]*(N+3)
+P = [0]*(N+2)
 P[0] = 1
 for i in range(N):
     if not broken[i]:
