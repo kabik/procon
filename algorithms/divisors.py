@@ -6,10 +6,3 @@ def divisors(n):
             if n // i != i:
                 l.append(n//i)
     return sorted(l)
-
-
-if __name__ == "__main__":
-    # test divisors()
-    print('-- test primes() --')
-    print(36, divisors(36))
-    print(100, divisors(100))

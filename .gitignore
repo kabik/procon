@@ -35,3 +35,4 @@
 input.txt
 .vscode
 tmp
+__pycache__

@@ -1,0 +1,14 @@
+name: Test algorithms
+on:
+  push:
+    branches:
+      - "*"
+  paths:
+    - 'algorithms/**'
+
+jobs:
+  unittest:
+    container: python:3.9
+    steps:
+      - run: |
+        python -m unittest discover -v algorithms.test
