@@ -1,14 +1,15 @@
-name: Test algorithms
+name: test
 on:
   push:
     branches:
       - "*"
   paths:
     - 'algorithms/**'
-
-jobs:
-  unittest:
-    container: python:3.9
-    steps:
-      - run: |
-        python -m unittest discover -v algorithms.test
+  jobs:
+    unittest:
+      runs-on: ubuntu-latest
+      container:
+        image: python:3.8-slim
+      steps:
+        - uses: actions/checkout@master
+        - run: python -m unittest discover -v algorithms.test
