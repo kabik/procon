@@ -1,6 +1,6 @@
 import unittest
 
-from .. import divisors
+import divisors
 
 class TestDivisors(unittest.TestCase):
     def test_empty(self):

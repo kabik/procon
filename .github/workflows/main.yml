@@ -5,11 +5,11 @@ on:
       - "*"
   paths:
     - 'algorithms/**'
-  jobs:
-    unittest:
-      runs-on: ubuntu-latest
-      container:
-        image: python:3.8-slim
-      steps:
-        - uses: actions/checkout@master
-        - run: python -m unittest discover -v algorithms.test
+jobs:
+  unittest:
+    runs-on: ubuntu-latest
+    container:
+      image: python:3.8-slim
+    steps:
+      - uses: actions/checkout@master
+      - run: python -m unittest discover -v algorithms
