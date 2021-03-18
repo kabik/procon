@@ -3,8 +3,8 @@ on:
   push:
     branches:
       - "*"
-  paths:
-    - 'algorithms/**'
+    paths:
+      - 'algorithms/**'
 jobs:
   unittest:
     runs-on: ubuntu-latest
