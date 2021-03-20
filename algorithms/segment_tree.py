@@ -1,6 +1,6 @@
+# ref: https://www.slideshare.net/iwiwi/ss-3578491
 # N: list size
 # A: list
-#
 
 N = 3
 A = [1,2,3]
