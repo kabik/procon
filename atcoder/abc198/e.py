@@ -25,22 +25,22 @@ for a,b in AB:
 
 visited = [False]*N
 ok = [False]*N
-def dfs(v, colors):
+colors = [0]*(10**5+1)
+def dfs(v):
     if visited[v]: return
     col = C[v]
 
-    if col not in colors or colors[col] == 0:
+    if colors[col] == 0:
         ok[v] = True
-        colors[col] = 1
-    else:
-        colors[col] += 1
 
+    colors[col] += 1
     visited[v] = True
+
     for e in edge[v]:
-        dfs(e, colors)
+        dfs(e)
     colors[col] -= 1
 
-dfs(0, {})
+dfs(0)
 for i in range(N):
     if ok[i]:
         print(i+1)
