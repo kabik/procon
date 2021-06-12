@@ -11,7 +11,7 @@ def LI1(): return list(map(int1, input().split()))
 def LLI1(rows_number): return [LI1() for _ in range(rows_number)]
 def BI(): return input().rstrip()
 def SI(): return input().rstrip().decode()
-def LSI(): return input().split()
+def LSI(): return SI().split()
 def LLSI(rows_number): return [SI() for _ in range(rows_number)]
 INF = 10 ** 16
 MOD = 10 ** 9 + 7
