@@ -26,7 +26,6 @@ elif A >= 0 and B >= 0:
         print('>')
     else:
         print('<')
-#elif A*B < 0:
 else:
     if C % 2 == 1:
         if A > B:
@@ -40,16 +39,3 @@ else:
             print('<')
         else:
             print('=')
-'''
-else:
-    if C % 2 == 1:
-        if A > B:
-            print('>')
-        else:
-            print('<')
-    else:
-        if A > B:
-            print('<')
-        else:
-            print('>')
-'''
