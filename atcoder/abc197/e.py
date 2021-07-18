@@ -29,10 +29,6 @@ for i in range(N):
     l[c] = min(l[c], x)
     r[c] = max(r[c], x)
 
-#print(XC)
-#print(l)
-##print(r)
-
 dp = [[0, 0] for _ in range(N+2)]
 pre = 0
 for c in range(1, N+2):
@@ -58,5 +54,4 @@ for c in range(1, N+2):
         rr = r[c] - r[pre]
     dp[c][1] = min(dp[pre][0] + lr, dp[pre][1] + rr)
     pre = c
-    #print(c, dp[c], ll, rl, lr, rr)
 print(dp[N+1][0])
