@@ -3,9 +3,9 @@
 no=$1
 prefix="abc"
 problems=("a" "b" "c" "d" "e" "f")
-template_file="template.py"
-random_input_file="random_input.py"
-compare_file="compare.sh"
+template_src="template.py"
+random_input_src="random_input.py"
+compare_src="compare.sh"
 
 if [ -z "$no" ]; then
     echo "usage: ./abc_py.sh problem_no"
@@ -15,9 +15,11 @@ fi
 for i in ${problems[@]}; do
     prob_dir=${prefix}${no}
     mkdir -p ${prob_dir}
-    cp -i $template_file ${prob_dir}/${i}.py
-    cp -i $template_file ${prob_dir}/${i}_naive.py
-    cp -i $random_input_file ${prob_dir}/${i}_input.py
-    sed -e "s/problem_no/${i}/g" $compare_file > ${prob_dir}/${i}_compare.sh
+    cp -i $template_src ${prob_dir}/${i}.py
+    cp -i $template_src ${prob_dir}/${i}_naive.py
+    cp -i $random_input_src ${prob_dir}/${i}_input.py
+    cp -i $compare_src ${prob_dir}/${i}_compare.sh
+    sed -i'.bk' -e "s|problem_no|${i}|g" ${prob_dir}/${i}_compare.sh
+    rm ${prob_dir}/${i}_compare.sh.bk
 done
-cp -i $template_file ${prob_dir}/tmp.py
+cp -i $template_src ${prob_dir}/tmp.py
