@@ -30,19 +30,8 @@ for i in range(N-1):
             if (x1, x2) not in d:
                 d[(x1,x2)] = 0
             d[(x1,x2)] += 1
-#print(d)
 
 ans = 0
 for v in d.values():
     ans += v*(v-1)//2
 print(ans)
-
-'''
-6
-0 0
-2 1
-0 1
-1 0
-1 1
-2 0
-'''

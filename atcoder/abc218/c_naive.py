@@ -58,17 +58,9 @@ else:
     rot_a = SA
     for _ in range(4):
         rot_a = np.rot90(rot_a)
-        sx, sy = get_first(rot_a)
-        ox, oy = tx-sx, ty-sy # offset
-        a = np.roll(rot_a, (ox,oy), axis=(0,1))
-        if ox >= 0:
-            a[:ox, :] = 0
-        else:
-            a[ox:, :] = 0
-        if oy >= 0:
-            a[:, :oy] = 0
-        else:
-            a[:, oy:] = 0
-        if np.array_equal(a, TA):
-            ans = 'Yes'
+        for i in range(N):
+            for j in range(N):
+                a = np.roll(rot_a, (i,j), axis=(0,1))
+                if np.array_equal(a, TA):
+                    ans = 'Yes'
     print(ans)
