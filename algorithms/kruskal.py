@@ -1,4 +1,4 @@
-# see https://hamukichi.hatenablog.jp/entry/2016/03/30/173446
+# ref https://hamukichi.hatenablog.jp/entry/2016/03/30/173446
 
 import array
 import collections
