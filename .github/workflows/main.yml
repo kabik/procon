@@ -12,8 +12,10 @@ jobs:
       - run: sleep 5 # there's still a race condition for now
 
       - name: Configure AWS
+        env:
+          AWS_ACCOUNT_ID: ${{secrets.AWS_ACCOUNT_ID}}
         run: |
-          export AWS_ROLE_ARN=arn:aws:iam::${{secrets.AWS_ACCOUNT_ID}}:role/ExampleGithubRole
+          export AWS_ROLE_ARN=arn:aws:iam::${AWS_ACCOUNT_ID}:role/ExampleGithubRole
           export AWS_WEB_IDENTITY_TOKEN_FILE=/tmp/awscreds
           export AWS_DEFAULT_REGION=us-east-1
 
