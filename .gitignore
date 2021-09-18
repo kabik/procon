@@ -33,6 +33,7 @@
 
 #
 input.txt
+out*.txt
 .vscode
 tmp
 __pycache__
