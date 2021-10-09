@@ -16,4 +16,5 @@ while true; do
         echo "Faster answer is ..."
         cat out2.txt
         exit
+    fi
 done
