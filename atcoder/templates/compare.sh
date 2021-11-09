@@ -1,4 +1,4 @@
-#!/bin/bash -eu
+#!/bin/bash
 
 cnt=0
 while true; do
