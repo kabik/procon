@@ -1,0 +1,22 @@
+{
+	"name": "procon_container",
+	"dockerComposeFile": [
+		"docker-compose.yml"
+	],
+	"service": "app",
+	"remoteUser": "root",
+	"workspaceFolder": "/procon",
+	"extensions": [],
+	"settings": {
+		"terminal.integrated.profiles.osx": {
+			"fish": {
+				"path": "/usr/bin/fish"
+			}
+		},
+		"terminal.integrated.defaultProfile.osx": "fish",
+		"[json]": {
+			"editor.tabSize": 2,
+			"editor.insertSpaces": true
+		},
+	}
+}

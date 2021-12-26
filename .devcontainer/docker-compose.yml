@@ -1,0 +1,18 @@
+version: "3"
+services:
+  app:
+    container_name: procon
+    build: .
+    tty: true
+    volumes:
+      - ..:/procon
+      - .:/workspace:cached
+      - ~/.alias:/root/.alias
+      - ~/.config/fish/config.fish:/root/.config/fish/config.fish
+      - ~/.bashrc:/root/.bashrc
+      - ~/.ssh:/root/.ssh
+      - ~/.gitconfig:/root/.gitconfig
+      - ~/.vimrc:/root/.vimrc
+      #- ~/.vim/colors/iceberg.vim:/root/.vim/colors/iceberg.vim
+# volumes:
+#   node_modules: {}
