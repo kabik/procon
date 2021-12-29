@@ -3,9 +3,9 @@
 cnt=0
 while true; do
     cnt=$(( $cnt + 1 ))
-    python problem_no_input.py > input.txt
-    python problem_no_naive.py < input.txt > out1.txt
-    python problem_no.py       < input.txt > out2.txt
+    python3 problem_no_input.py > input.txt
+    python3 problem_no_naive.py < input.txt > out1.txt
+    python3 problem_no.py       < input.txt > out2.txt
 
     echo "--- Test $cnt ---"
     cat input.txt

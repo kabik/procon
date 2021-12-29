@@ -1,6 +1,7 @@
 import sys
 
 # sys.setrecursionlimit(10**6)
+def debug(**kwargs): print(f'DEBUG: {kwargs}', file=sys.stderr)
 input = sys.stdin.buffer.readline
 int1 = lambda x: int(x) - 1
 p2D = lambda x: print(*x, sep="\n")
