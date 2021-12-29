@@ -22,11 +22,9 @@ LR = LLI(N)
 LR.sort(key=lambda x: x[1])
 
 ans = 0
-i = 0
-while i < N:
-    _, r = LR[i]
-    while i+1 < N and r+D > LR[i+1][0]:
-        i += 1
-    i += 1
-    ans += 1
+x = -INF
+for l, r in LR:
+    if x+D-1 < l:
+        x = r
+        ans += 1
 print(ans)
