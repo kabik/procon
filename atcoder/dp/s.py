@@ -23,7 +23,7 @@ K = SI()
 D = II()
 
 klen = len(K)
-dp = [[[0]*max(D, 10) for _ in range(2)] for _ in range(klen+1)]
+dp = [[[0]*D for _ in range(2)] for _ in range(klen+1)]
 dp[0][0][0] = 1
 for i in range(klen):
     k = int(K[i])
