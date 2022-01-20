@@ -7,7 +7,7 @@ fn main() {
 
     let mut ok = false;
     let mut b: usize = 1 << 60;
-    for _ in (0..61).rev() {
+    for _ in 0..61 {
         if k & b > 0 {
             print!("{}", 2);
             ok = true;
