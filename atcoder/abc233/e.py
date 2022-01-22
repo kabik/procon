@@ -26,8 +26,9 @@ carry = 0
 x = sum(digits)
 ans = []
 for i in range(N-1, -1, -1):
-    ans.append(str((x+carry)%10))
-    carry = (x+carry)//10
+    carry += x
+    ans.append(str(carry%10))
+    carry //= 10
     x -= digits[i]
 if carry > 0:
     ans.append(str(carry))
