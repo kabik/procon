@@ -28,26 +28,22 @@ UV = LLI1(M)
 edge = [ [] for _ in range(N) ]
 for u,v in UV:
     #debug(u=u, v=v)
-    if H[u] < H[v]:
-        edge[v].append( (u, H[v]-H[u]) )
-        edge[u].append( (v, 2*(H[u]-H[v])) )
-    else:
-        edge[u].append( (v, H[u]-H[v]) )
-        edge[v].append( (u, 2*(H[v]-H[u])) )
+    edge[v].append( (max(H[u]-H[v], 0), u) )
+    edge[u].append( (max(H[v]-H[u], 0), v) )
 
-joy = [-INF]*N
-joy[0] = 0
+dist = [INF]*N
+dist[0] = 0
 q = [(0,0)]
 while q:
-    from_idx, now = heappop(q)
+    now, from_idx = heappop(q)
     #debug(q=q, now=now, from_idx=from_idx)
-    if now < joy[from_idx]: continue
-    for to_idx, d in edge[from_idx]:
-        #debug(to_idx=to_idx, d=d)
+    if now > dist[from_idx]: continue
+    for d, to_idx in edge[from_idx]:
         t = now + d
-        if t <= joy[to_idx]: continue
-        joy[to_idx] = t
-        heappush( q, (to_idx, joy[to_idx]) )
+        #debug(to_idx=to_idx, d=d, t=t)
+        if t >= dist[to_idx]: continue
+        dist[to_idx] = t
+        heappush( q, (dist[to_idx], to_idx) )
 
-#debug(joy=joy)
-print(max(joy))
+#debug(dist=dist)
+print(max(H[0]-H[i]-dist[i] for i in range(N)))
