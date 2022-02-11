@@ -14,6 +14,7 @@ def BI(): return input().rstrip()
 def SI(): return input().rstrip().decode()
 def LSI(): return SI().split()
 def LLSI(rows_number): return [SI() for _ in range(rows_number)]
+def YN(b): print({True: 'Yes', False: 'No'}[b])
 INF = 10 ** 16
 MOD = 10 ** 9 + 7
 # MOD = 998244353
