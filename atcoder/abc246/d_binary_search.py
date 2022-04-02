@@ -19,13 +19,20 @@ INF = 10 ** 16
 MOD = 10 ** 9 + 7
 # MOD = 998244353
 
+def f(a,b):
+    return a*a*a + a*a*b + a*b*b + b*b*b
+
 N = II()
-x = INF
-for a in range(1000):
-    for b in range(1000):
-        if (a+b)*(a*a+b*b) > N:
-            if (a+b)*(a*a+b*b) < x:
-                x = (a+b)*(a*a+b*b)
-                fa,fb = a,b
-debug(a=fa, b=fb)
+x = 10**20
+for a in range(10**6+1):
+    ng, ok = -1, 10**6+1
+    while ok - ng > 1:
+        mid = (ng+ok)//2
+        if f(a,mid) < N:
+            ng = mid
+        else:
+            ok = mid
+    b = ok
+    if f(a,b) >= N:
+        x = min(x, f(a,b))
 print(x)
