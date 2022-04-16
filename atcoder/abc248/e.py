@@ -22,8 +22,6 @@ MOD = 10 ** 9 + 7
 N, K = LI()
 XY = LLI(N)
 
-eps = 10**(-9)
-lines = []
 used = [[False]*N for _ in range(N)]
 
 def colinear(x1, y1, x2, y2, x3, y3):
