@@ -8,7 +8,3 @@ edition = "2018"
 [dependencies]
 proconio = "0.3.6"
 itertools = "0.10.2"
-
-[[bin]]
-name = "bc"
-path = "src/bc.rs"
