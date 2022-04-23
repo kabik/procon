@@ -1,5 +1,5 @@
 # 素因数分解
-# O(NlogN)
+# O(N^0.5logN)
 def prime_factorization(n):
     dct = {}
     tmp = n
