@@ -1,3 +1,4 @@
+# n以下の素数列挙
 def primes(n):
     is_prime = [True] * (n+1)
     is_prime[0] = False
@@ -11,7 +12,7 @@ def primes(n):
             k += i
     return is_prime
 
-
+# 素因数分解
 def prime_factorization(n):
     dct = {}
     tmp = n
@@ -30,17 +31,3 @@ def prime_factorization(n):
         dct[n] = 1
 
     return dct
-
-if __name__ == "__main__":
-    # test primes()
-    print('-- test primes() --')
-    n = 100
-    is_prime = primes(n)
-    for i in range(n+1):
-        if is_prime[i]:
-            print(i)
-
-    # test prime_factorization()
-    print('-- test prime_factorization() --')
-    print(36, prime_factorization(36))
-    print((10**9+7)*5, prime_factorization((10**9+7)*5))
