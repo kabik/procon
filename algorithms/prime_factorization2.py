@@ -1,4 +1,5 @@
 # 高速素因数分解
+# 複数クエリに強い
 # O(NlogN)
 
 from collections import defaultdict
