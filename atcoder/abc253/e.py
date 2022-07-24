@@ -23,15 +23,12 @@ N, M, K = LI()
 
 dp = [1] * (M+1)
 dp[0] = 0
-#debug(dp=dp)
 for _ in range(1, N):
-    #print('--------')
     acm = [0] * (M+1)
     acm[1] = dp[1]
     for i in range(2, M+1):
         acm[i] = acm[i-1] + dp[i]
 
-    #debug(acm=acm)
     ndp = [0] * (M+1)
     for i in range(1,M+1):
         if K == 0:
@@ -42,7 +39,6 @@ for _ in range(1, N):
             if i + K <= M:
                 ndp[i] += acm[M] - acm[i+K-1]
 
-    #debug(ndp=ndp)
     for i in range(M+1):
         dp[i] = ndp[i] % MOD
 
